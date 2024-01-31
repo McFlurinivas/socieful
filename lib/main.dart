@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'splash_screen.dart';
+import 'package:socieful/utils/constants.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,10 +11,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: 'SOCIEFUL',
-      color: Color.fromRGBO(255, 173, 173, 1),
-      home: SplashScreen(), 
+      theme: ThemeData(
+        appBarTheme: AppThemes.appBarTheme,
+        primarySwatch: AppColors.globalColor,
+      ),
+      home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

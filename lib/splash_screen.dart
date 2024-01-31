@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:socieful/home_page.dart';
+import 'package:socieful/pages/home_page.dart';
+import '../utils/constants.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -17,16 +18,13 @@ class _SplashScreenState extends State<SplashScreen> {
         const Duration(seconds: 2),
         () => Navigator.pushReplacement(
             context,
-            MaterialPageRoute(
-                builder: (context) => const HomePage(
-                      choices: choices,
-                    ))));
+            MaterialPageRoute(builder: (context) => const HomePage())));
   }
 
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: const Color.fromRGBO(255, 173, 173, 1),
+        color: AppColors.globalColor,
         child: Image.asset('assets/images/logo.jpg'));
   }
 }
