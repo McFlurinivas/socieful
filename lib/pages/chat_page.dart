@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:socieful/utils/constants.dart';
+import 'package:socieful/widgets/custom_app_bar.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({Key? key}) : super(key: key);
@@ -32,21 +32,7 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.white,
-        appBar: AppBar(
-          title: Image.asset('assets/images/logo.jpg'),
-          backgroundColor: AppColors.globalColor,
-          shape: const RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(5),
-                bottomLeft: Radius.circular(5)),
-          ),
-          leading: IconButton(
-            icon: const Icon(Icons.menu),
-            tooltip: 'Menu Icon',
-            onPressed: () {},
-          ),
-          systemOverlayStyle: SystemUiOverlayStyle.light,
-        ),
+      appBar: const CustomAppBar(),
       body: Column(
         children: <Widget>[
           Expanded(

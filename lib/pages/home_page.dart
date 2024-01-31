@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:socieful/widgets/custom_app_bar.dart';
 import '../models/choice.dart';
 import '../widgets/choice_card.dart';
 import '../utils/constants.dart';
@@ -39,20 +39,7 @@ class HomePage extends StatelessWidget {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        title: Image.asset('assets/images/logo.jpg'),
-        backgroundColor: AppColors.globalColor,
-        shape: const RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              bottomRight: Radius.circular(5), bottomLeft: Radius.circular(5)),
-        ),
-        leading: IconButton(
-          icon: const Icon(Icons.menu),
-          tooltip: 'Menu Icon',
-          onPressed: () {},
-        ),
-        systemOverlayStyle: SystemUiOverlayStyle.light,
-      ),
+      appBar: const CustomAppBar(),
       backgroundColor: AppColors.white,
       body: Center(
         child: SizedBox(

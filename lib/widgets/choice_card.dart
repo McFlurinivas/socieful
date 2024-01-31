@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:socieful/utils/constants.dart';
 import '../models/choice.dart';
 
 class ChoiceCard extends StatelessWidget {
@@ -16,6 +17,7 @@ class ChoiceCard extends StatelessWidget {
     return InkWell(
       onTap: onPressed,
       child: Card(
+        color: AppColors.btnColor,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(25),
         ),
