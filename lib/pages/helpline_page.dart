@@ -11,7 +11,6 @@ class HelplinePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Define a list of helpline options
     final List<HelplineOption> helplineOptions = [
       HelplineOption(title: 'Women In Distress', number: '1091'),
       HelplineOption(title: 'Domestic Abuse', number: '181'),
@@ -19,6 +18,16 @@ class HelplinePage extends StatelessWidget {
       HelplineOption(title: 'Student/Child Helpline', number: '1098'),
       HelplineOption(title: 'Ambulance', number: '102'),
     ];
+
+
+    void _launchUrl(String url) async {
+      final Uri uri = Uri.parse(url);
+      if (!await launchUrl(uri)) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Could not launch $url')),
+        );
+      }
+    }
 
     return Scaffold(
       backgroundColor: AppColors.white,
@@ -28,8 +37,10 @@ class HelplinePage extends StatelessWidget {
         itemBuilder: (context, index) {
           final option = helplineOptions[index];
           return ChoiceCard(
-            choice: Choice(title: option.title, icon: Icons.call), // Assuming Choice is appropriately defined
-            onPressed: () => launch('tel:${option.number}'),
+            choice: Choice(
+                title: option.title,
+                icon: Icons.call),
+            onPressed: () => _launchUrl('tel:${option.number}'),
           );
         },
       ),
