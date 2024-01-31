@@ -19,12 +19,17 @@ class HelplinePage extends StatelessWidget {
       HelplineOption(title: 'Ambulance', number: '102'),
     ];
 
-
-    void _launchUrl(String url) async {
-      final Uri uri = Uri.parse(url);
-      if (!await launchUrl(uri)) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Could not launch $url')),
+    Future<void> launchURL(BuildContext context, String url) async {
+      final scaffoldMessenger = ScaffoldMessenger.of(context);
+      try {
+        if (!await launchUrl(Uri.parse(url))) {
+          scaffoldMessenger.showSnackBar(
+            SnackBar(content: Text('Could not launch $url')),
+          );
+        }
+      } catch (e) {
+        scaffoldMessenger.showSnackBar(
+          SnackBar(content: Text('An error occurred: $e')),
         );
       }
     }
@@ -37,10 +42,8 @@ class HelplinePage extends StatelessWidget {
         itemBuilder: (context, index) {
           final option = helplineOptions[index];
           return ChoiceCard(
-            choice: Choice(
-                title: option.title,
-                icon: Icons.call),
-            onPressed: () => _launchUrl('tel:${option.number}'),
+            choice: Choice(title: option.title, icon: Icons.call),
+            onPressed: () => launchURL(context, 'tel:${option.number}'),
           );
         },
       ),
