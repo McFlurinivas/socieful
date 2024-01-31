@@ -47,12 +47,12 @@ class _ChatPageState extends State<ChatPage> {
                     padding: const EdgeInsets.all(15),
                     margin: const EdgeInsets.symmetric(vertical: 5),
                     decoration: BoxDecoration(
-                      color: Colors.pinkAccent,
+                      color: AppColors.btnColor,
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: Text(
                       _messages[index],
-                      style: const TextStyle(color: Colors.white),
+                      style: const TextStyle(color: AppColors.white),
                     ),
                   ),
                 );
@@ -61,7 +61,7 @@ class _ChatPageState extends State<ChatPage> {
           ),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 8),
-            color: Colors.white,
+            color: AppColors.white,
             child: Row(
               children: <Widget>[
                 Expanded(
@@ -82,8 +82,8 @@ class _ChatPageState extends State<ChatPage> {
                 GestureDetector(
                   onTap: _sendMessage,
                   child: const CircleAvatar(
-                    backgroundColor: Colors.pinkAccent,
-                    child: Icon(Icons.send, color: Colors.white),
+                    backgroundColor: AppColors.btnColor,
+                    child: Icon(Icons.send, color: AppColors.white),
                   ),
                 ),
               ],
