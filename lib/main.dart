@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'SOCIEFUL',
       theme: ThemeData(
         appBarTheme: AppThemes.appBarTheme,
-        primarySwatch: AppColors.globalColor,
+        primarySwatch: Colors.pink,
       ),
       home: const SplashScreen(),
       debugShowCheckedModeBanner: false,
