@@ -1,8 +1,13 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:socieful/providers/user_provider.dart';
 import 'splash_screen.dart';
 import 'package:socieful/utils/constants.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -11,14 +16,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'SOCIEFUL',
-      theme: ThemeData(
-        appBarTheme: AppThemes.appBarTheme,
-        primarySwatch: Colors.pink,
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => UserProvider()),
+      ],
+      child: MaterialApp(
+        title: 'SOCIEFUL',
+        theme: ThemeData(
+          appBarTheme: AppThemes.appBarTheme,
+          primarySwatch: Colors.pink,
+        ),
+        home: const SplashScreen(),
+        debugShowCheckedModeBanner: false,
       ),
-      home: const SplashScreen(),
-      debugShowCheckedModeBanner: false,
     );
   }
 }

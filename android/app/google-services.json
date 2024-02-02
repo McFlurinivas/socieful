@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "627270484828",
+    "project_id": "socieful",
+    "storage_bucket": "socieful.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:627270484828:android:2ff11e11dbdd63b538b799",
+        "android_client_info": {
+          "package_name": "com.example.socieful"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9-tl7cNq0FAzSHjU7dLZHByp_S-kl9Nk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

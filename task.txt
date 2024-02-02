@@ -1,0 +1,3 @@
+create new chat feature. 
+user should terminate chat by clicking a button if needed and direct to second stage. 
+user should continue chat even after closing the chat and shoud go back from where left 

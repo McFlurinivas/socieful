@@ -19,3 +19,14 @@ class AppThemes {
     systemOverlayStyle: SystemUiOverlayStyle.light,
   );
 }
+
+class SnackBarHelper {
+  static void showSnackbar(String txt, BuildContext context) {
+    final snackBar = SnackBar(
+      content: Text(txt),
+      duration: const Duration(seconds: 3), 
+    );
+    ScaffoldMessenger.of(context).showSnackBar(snackBar);
+  }
+}
+
