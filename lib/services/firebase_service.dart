@@ -29,12 +29,15 @@ class FirebaseService {
     });
   }
 
-  Stream<QuerySnapshot> messagesStream(String userId) {
+  Stream<List<DocumentSnapshot>> messagesStream(String userId,
+      {int limit = 20}) {
     return _firestore
         .collection('user_chats')
         .doc(userId)
         .collection('messages')
         .orderBy('timestamp', descending: true)
-        .snapshots();
+        .limit(limit)
+        .snapshots()
+        .map((snapshot) => snapshot.docs);
   }
 }

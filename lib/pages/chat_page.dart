@@ -74,7 +74,8 @@ class _ChatPageState extends State<ChatPage> {
 
     if (result == null || !result) {
       if (context.mounted) {
-        SnackBarHelper.showSnackbar('User information is required to use the chat.', context);
+        SnackBarHelper.showSnackbar(
+            'User information is required to use the chat.', context);
         Navigator.of(context).pop();
       }
     }
@@ -95,7 +96,8 @@ class _ChatPageState extends State<ChatPage> {
         // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChatPage()));
       } else {
         if (context.mounted) {
-          SnackBarHelper.showSnackbar('Cannot create user. Try Again!!', context);
+          SnackBarHelper.showSnackbar(
+              'Cannot create user. Try Again!!', context);
         }
       }
     }
@@ -146,6 +148,8 @@ class _ChatPageState extends State<ChatPage> {
 
   @override
   Widget build(BuildContext context) {
+    final userProvider = Provider.of<UserProvider>(context);
+    _userId = userProvider.user?.id;
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: CustomAppBar(
@@ -161,26 +165,34 @@ class _ChatPageState extends State<ChatPage> {
           Expanded(
             child: _userId == null
                 ? const Center(child: CircularProgressIndicator())
-                : StreamBuilder<QuerySnapshot>(
-                    stream: _firebaseService.messagesStream(_userId!),
+                : StreamBuilder<List<DocumentSnapshot>>(
+                    stream:
+                        _firebaseService.messagesStream(_userId!, limit: 20),
                     builder: (context, snapshot) {
+                      if (snapshot.connectionState == ConnectionState.waiting) {
+                        return const Center(child: CircularProgressIndicator());
+                      }
+
                       if (snapshot.hasError) {
                         return Text('Error: ${snapshot.error}');
                       }
 
-                      if (!snapshot.hasData) {
-                        return const Center(child: CircularProgressIndicator());
+                      if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                        return const Center(child: Text('Chat with us and say no to depression'));
                       }
 
-                      final messages = snapshot.data!.docs;
+                      final messages = snapshot.data!;
                       return ListView.builder(
                         itemCount: messages.length,
                         reverse: true,
                         padding: const EdgeInsets.symmetric(
                             vertical: 15, horizontal: 10),
                         itemBuilder: (context, index) {
-                          var message = messages[index].get('text');
-                          return ChatMessageTile(message: message);
+                          var messageData =
+                              messages[index].data() as Map<String, dynamic>;
+                          var messageText = messageData[
+                              'text']; // Adjust based on your data structure
+                          return ChatMessageTile(message: messageText);
                         },
                       );
                     },
