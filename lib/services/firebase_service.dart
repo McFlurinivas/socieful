@@ -18,15 +18,25 @@ class FirebaseService {
     }
   }
 
-  Future<void> sendMessage(String userId, String messageText) async {
-    await _firestore
+  Future<void> sendMessage(String userId, String messageText,
+      {bool fromChatbot = false}) async {
+        await _firestore
         .collection('user_chats')
         .doc(userId)
         .collection('messages')
         .add({
       'text': messageText,
       'timestamp': FieldValue.serverTimestamp(),
+      'fromChatbot': fromChatbot,
     });
+  }
+
+  Future<void> deleteUser(String userId) async {
+    try {
+      await _firestore.collection('users').doc(userId).delete();
+    } catch (e) {
+      print('Error deleting user: $e');
+    }
   }
 
   Stream<List<DocumentSnapshot>> messagesStream(String userId,

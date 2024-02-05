@@ -1,3 +1,7 @@
 create new chat feature. 
 user should terminate chat by clicking a button if needed and direct to second stage. 
 user should continue chat even after closing the chat and shoud go back from where left 
+
+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
+
+Fi1e uploaded successfully with ID:file-Y6Puh8fgJsdLtl8LpQ3yVGp1
