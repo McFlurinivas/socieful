@@ -42,6 +42,7 @@ class _ChatPageState extends State<ChatPage> {
 
   void _initializeUserId() async {
     final userId = await SharedPreferencesService.getUserId();
+    print("Initializing user ID: $userId");
     if (userId != null) {
       setState(() {
         _userId = userId;
@@ -80,8 +81,7 @@ class _ChatPageState extends State<ChatPage> {
 
     if (result == null || !result) {
       if (context.mounted) {
-        SnackBarHelper.showSnackbar(
-            'User information is required to use the chat.', context);
+        SnackBarHelper.showSnackbar('User information is required to use the chat.', context);
         Navigator.of(context).pop();
       }
     }
@@ -137,7 +137,7 @@ class _ChatPageState extends State<ChatPage> {
         } else {
           if (context.mounted) {
             SnackBarHelper.showSnackbar(
-                'Couldn\'t connect to the server', context);
+                'Couldn\'t connect to the server: ${response.body}', context);
           }
         }
       } on SocketException catch (_) {
@@ -205,7 +205,7 @@ class _ChatPageState extends State<ChatPage> {
   @override
   Widget build(BuildContext context) {
     final userProvider = Provider.of<UserProvider>(context);
-    _userId = userProvider.user?.id;
+    _userId = userProvider.user?.id ?? _userId;
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: CustomAppBar(
@@ -222,8 +222,8 @@ class _ChatPageState extends State<ChatPage> {
             child: _userId == null
                 ? const Center(child: CircularProgressIndicator())
                 : StreamBuilder<List<DocumentSnapshot>>(
-                    stream:
-                        _firebaseService.messagesStream(_userId!, limit: 20),
+                    stream: _firebaseService.messagesStream(_userId!,
+                            limit: 20),
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
                         return const Center(child: CircularProgressIndicator());
@@ -250,12 +250,14 @@ class _ChatPageState extends State<ChatPage> {
                         if (timestamp != null) {
                           DateTime messageDate = timestamp.toDate();
 
-                          if (lastDate == null || !isSameDay(lastDate, messageDate)) {
-                            String formattedDate = DateFormat('MMMM d, yyyy').format(messageDate);
-                            itemsWithDates.add(formattedDate); 
+                          if (lastDate == null ||
+                              !isSameDay(lastDate, messageDate)) {
+                            String formattedDate =
+                                DateFormat('MMMM d, yyyy').format(messageDate);
+                            itemsWithDates.add(formattedDate);
                             lastDate = messageDate;
                           }
-                          itemsWithDates.add(messageSnapshot); 
+                          itemsWithDates.add(messageSnapshot);
                         }
                       }
                       return ListView.builder(
@@ -275,14 +277,16 @@ class _ChatPageState extends State<ChatPage> {
                             var messageText = messageData['text'];
                             var fromChatbot =
                                 messageData['fromChatbot'] ?? false;
-                            var timestamp = (messageData['timestamp'] as Timestamp).toDate();
+                            var timestamp =
+                                (messageData['timestamp'] as Timestamp)
+                                    .toDate();
                             return ChatMessageTile(
                               message: messageText,
                               fromChatbot: fromChatbot,
                               timestamp: timestamp,
                             );
                           } else {
-                            return const SizedBox.shrink(); 
+                            return const SizedBox.shrink();
                           }
                         },
                       );
