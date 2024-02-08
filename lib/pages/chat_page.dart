@@ -1,10 +1,10 @@
 import 'dart:convert';
-import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 import 'package:socieful/widgets/custom_dialog_box.dart';
 import 'package:socieful/widgets/user_info_form.dart';
+import '../providers/chat_message_provider.dart';
 import '../services/shared_preferences_service.dart';
 import '../models/user.dart';
 import '../providers/user_provider.dart';
@@ -30,6 +30,7 @@ class _ChatPageState extends State<ChatPage> {
   final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   TextEditingController nameController = TextEditingController();
   TextEditingController emailController = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
   bool _isWaitingForResponse = false;
 
   @override
@@ -44,119 +45,133 @@ class _ChatPageState extends State<ChatPage> {
     final userId = await SharedPreferencesService.getUserId();
     print("Initializing user ID: $userId");
     if (userId != null) {
-      setState(() {
-        _userId = userId;
-      });
+      setState(() => _userId = userId);
+      _initMessagesStream();
     } else {
       _promptForUserInfo();
     }
+  }
+
+  void _initMessagesStream() {
+    if (_userId == null) return;
+    final provider = Provider.of<ChatMessagesProvider>(context, listen: false);
+    _firebaseService.messagesStream(_userId!).listen((messageList) {
+      provider.addMessages(messageList);
+      WidgetsBinding.instance.addPostFrameCallback((_) => _scrollToBottom());
+    });
   }
 
   void _promptForUserInfo() async {
     final result = await showDialog<bool>(
       context: context,
       barrierDismissible: false,
-      builder: (BuildContext context) {
-        return CustomDialog(
-          title: const Text('Enter your information'),
-          content: UserInfoForm(
-            formKey: _formKey,
-            nameController: nameController,
-            emailController: emailController,
+      builder: (BuildContext context) => CustomDialog(
+        title: const Text('Enter your information'),
+        content: UserInfoForm(
+          formKey: _formKey,
+          nameController: nameController,
+          emailController: emailController,
+        ),
+        actions: <Widget>[
+          TextButton(
+            child: const Text('Submit'),
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+                Navigator.of(context).pop(true);
+                _submitUserInfo(nameController.text, emailController.text);
+              }
+            },
           ),
-          actions: <Widget>[
-            TextButton(
-              child: const Text('Submit'),
-              onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  Navigator.of(context).pop(true);
-                  _submitUserInfo(nameController.text, emailController.text);
-                }
-              },
-            ),
-          ],
-        );
-      },
+        ],
+      ),
     );
 
-    if (result == null || !result) {
-      if (context.mounted) {
-        SnackBarHelper.showSnackbar('User information is required to use the chat.', context);
-        Navigator.of(context).pop();
-      }
+    if (result != true && mounted) {
+      showSnackBar(
+          'User information is required to use the chat.', context);
+      Navigator.of(context).pop();
     }
   }
 
   void _submitUserInfo(String name, String email) async {
-    if (name.isNotEmpty && email.isNotEmpty) {
-      String? userId = await _firebaseService.createUser(name, email);
-      if (userId != null) {
-        await SharedPreferencesService.saveUserId(userId);
-        if (context.mounted) {
-          Provider.of<UserProvider>(context, listen: false)
-              .setUser(UserModel(id: userId, name: name, email: email));
-        }
-        setState(() {
-          _userId = userId;
-        });
-        // Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => ChatPage()));
-      } else {
-        if (context.mounted) {
-          SnackBarHelper.showSnackbar(
-              'Cannot create user. Try Again!!', context);
-        }
+    if (name.isEmpty || email.isEmpty) return;
+    showSnackBar("Checking server and creating user...", context);
+    var serverCheckPassed = await checkServerOrCondition();
+    if (!serverCheckPassed && mounted) {
+      showSnackBar('Cannot proceed due to server', context);
+      return;
+    }
+    String? userId = await _firebaseService.createUser(name, email);
+    if (userId == null) {
+      if (mounted) {
+        showSnackBar('Cannot create user. Try Again!!', context);
       }
+      return;
+    }
+    await SharedPreferencesService.saveUserId(userId);
+    if (mounted) {
+      Provider.of<UserProvider>(context, listen: false)
+        .setUser(UserModel(id: userId, name: name, email: email));
+    }
+    setState(() => _userId = userId);
+    _initMessagesStream();
+  }
+
+  Future<bool> checkServerOrCondition() async {
+    try {
+      final response = await http.get(Uri.parse('http://192.168.27.132:5000/'));
+      if (response.statusCode == 200) {
+        // Assuming a 200 status code means the server check passed
+        return true;
+      }
+      return false;
+    } catch (e) {
+      // Handle the error, perhaps by logging it or setting a state variable
+      return false;
     }
   }
 
   void _sendMessage() async {
-    if (_isWaitingForResponse) return;
     final messageText = _messageController.text.trim();
-    if (messageText.isNotEmpty && _userId != null) {
-      setState(() {
-        _isWaitingForResponse = true; // Start waiting for a response
-      });
-      try {
-        await _firebaseService.sendMessage(_userId!, messageText,
-            fromChatbot: false);
-        _messageController.clear();
-        final response = await http.post(
-          Uri.parse('http://192.168.27.132:5000/'), // Your Flask server URL
-          headers: <String, String>{
-            'Content-Type': 'application/json; charset=UTF-8',
-          },
-          body: jsonEncode(<String, String>{
-            'message': messageText,
-          }),
-        );
-        if (response.statusCode == 200) {
-          final responseBody = jsonDecode(response.body);
-          // Store chatbot's reply in Firestore
-          await _firebaseService.sendMessage(_userId!, responseBody['reply'],
-              fromChatbot: true);
-        } else {
-          if (context.mounted) {
-            SnackBarHelper.showSnackbar(
-                'Couldn\'t connect to the server: ${response.body}', context);
-          }
+    if (_isWaitingForResponse || messageText.isEmpty) return;
+    _isWaitingForResponse = true;
+    _messageController.clear();
+
+    try {
+      // Assuming isNewChat determines if the chat is new or ongoing
+      await _firebaseService.sendMessage(_userId!, messageText,
+          fromChatbot: false);
+
+      final response = await http.post(
+        Uri.parse('http://192.168.27.132:5000/'),
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+        },
+        body: jsonEncode(<String, String>{
+          'message': messageText,
+        }),
+      );
+
+      if (response.statusCode == 200) {
+        final responseBody = jsonDecode(response.body);
+        //await Future.delayed(const Duration(seconds: 1));
+        await _firebaseService.sendMessage(_userId!, responseBody['reply'],
+            fromChatbot: true);
+      } else {
+        if(mounted){
+          showSnackBar(
+            'Couldn\'t connect to the server:', context);
         }
-      } on SocketException catch (_) {
-        await _firebaseService.deleteUser(_userId!);
-        await SharedPreferencesService.clearUserData();
-        if (context.mounted) {
-          SnackBarHelper.showSnackbar(
-              'Couldn\'t contact the server. Try again later!!', context);
-          Navigator.of(context).pop();
-        }
-      } catch (e) {
-        if (context.mounted) {
-          SnackBarHelper.showSnackbar('Error encountered: $e', context);
-          Navigator.of(context).pop();
-        }
-      } finally {
-        setState(() {
-          _isWaitingForResponse = false;
-        });
+        
+      }
+    } catch (e) {
+      if (mounted) {
+        showSnackBar('Error encountered: $e', context);
+      }
+    } finally {
+      if (mounted) {
+        setState(() => _isWaitingForResponse = false);
+        _scrollToBottom();
       }
     }
   }
@@ -202,6 +217,14 @@ class _ChatPageState extends State<ChatPage> {
         date1.day == date2.day;
   }
 
+  void _scrollToBottom() {
+    if (_scrollController.hasClients) {
+      final maxScroll = _scrollController.position.maxScrollExtent;
+      _scrollController.animateTo(maxScroll,
+          duration: const Duration(milliseconds: 300), curve: Curves.easeOut);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final userProvider = Provider.of<UserProvider>(context);
@@ -221,25 +244,23 @@ class _ChatPageState extends State<ChatPage> {
           Expanded(
             child: _userId == null
                 ? const Center(child: CircularProgressIndicator())
-                : StreamBuilder<List<DocumentSnapshot>>(
-                    stream: _firebaseService.messagesStream(_userId!,
-                            limit: 20),
-                    builder: (context, snapshot) {
-                      if (snapshot.connectionState == ConnectionState.waiting) {
+                : Consumer<ChatMessagesProvider>(
+                    builder: (_, provider, __) {
+                      if (provider.isLoading) {
                         return const Center(child: CircularProgressIndicator());
                       }
 
-                      if (snapshot.hasError) {
-                        return Text('Error: ${snapshot.error}');
+                      if (provider.error != null) {
+                        return Text('Error: ${provider.error}');
                       }
 
-                      if (!snapshot.hasData || snapshot.data!.isEmpty) {
+                      if (provider.messages.isEmpty) {
                         return const Center(
                             child:
                                 Text('Chat with us and say no to depression'));
                       }
 
-                      final messages = snapshot.data!;
+                      final messages = provider.messages;
                       List<dynamic> itemsWithDates = [];
                       DateTime? lastDate;
 
@@ -261,6 +282,7 @@ class _ChatPageState extends State<ChatPage> {
                         }
                       }
                       return ListView.builder(
+                        controller: _scrollController,
                         itemCount: itemsWithDates.length,
                         padding: const EdgeInsets.symmetric(
                             vertical: 15, horizontal: 10),

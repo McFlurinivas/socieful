@@ -39,15 +39,31 @@ class FirebaseService {
     }
   }
 
-  Stream<List<DocumentSnapshot>> messagesStream(String userId,
-      {int limit = 20}) {
+  Stream<List<DocumentSnapshot>> messagesStream(String userId,) {
     return _firestore
         .collection('user_chats')
         .doc(userId)
         .collection('messages')
         .orderBy('timestamp', descending: true)
-        .limit(limit)
         .snapshots()
         .map((snapshot) => snapshot.docs);
+  }
+
+  Future<bool> checkIfNewChat(String userId) async {
+    try {
+      // Attempt to fetch the most recent message for the given userId
+      final querySnapshot = await _firestore
+          .collection('user_chats')
+          .doc(userId)
+          .collection('messages')
+          .limit(1) // We only need to know if at least one message exists
+          .get();
+
+      // If there are no documents/messages, it's a new chat
+      return querySnapshot.docs.isEmpty;
+    } catch (e) {
+      print('Error checking if new chat: $e');
+      return false; // Assuming false as default in case of error
+    }
   }
 }

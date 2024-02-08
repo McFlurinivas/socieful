@@ -1,6 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:socieful/providers/chat_message_provider.dart';
 import 'package:socieful/providers/user_provider.dart';
 import 'splash_screen.dart';
 import 'package:socieful/utils/constants.dart';
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(create: (_) => UserProvider()),
+        ChangeNotifierProvider(create: (_) => ChatMessagesProvider()),
       ],
       child: MaterialApp(
         title: 'SOCIEFUL',

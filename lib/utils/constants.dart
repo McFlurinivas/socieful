@@ -20,13 +20,11 @@ class AppThemes {
   );
 }
 
-class SnackBarHelper {
-  static void showSnackbar(String txt, BuildContext context) {
-    final snackBar = SnackBar(
-      content: Text(txt),
-      duration: const Duration(seconds: 3), 
-    );
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-  }
+void showSnackBar(String message, BuildContext context) {
+  final snackBar = SnackBar(
+    content: Text(message),
+    behavior: SnackBarBehavior.floating, // Optional: to float the snackbar
+  );
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }
 
