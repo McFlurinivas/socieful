@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -36,9 +37,7 @@ class _ChatPageState extends State<ChatPage> {
   @override
   void initState() {
     super.initState();
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      _initializeUserId();
-    });
+    _initializeUserId();
   }
 
   void _initializeUserId() async {
@@ -87,8 +86,7 @@ class _ChatPageState extends State<ChatPage> {
     );
 
     if (result != true && mounted) {
-      showSnackBar(
-          'User information is required to use the chat.', context);
+      showSnackBar('User information is required to use the chat.', context);
       Navigator.of(context).pop();
     }
   }
@@ -111,17 +109,22 @@ class _ChatPageState extends State<ChatPage> {
     await SharedPreferencesService.saveUserId(userId);
     if (mounted) {
       Provider.of<UserProvider>(context, listen: false)
-        .setUser(UserModel(id: userId, name: name, email: email));
+          .setUser(UserModel(id: userId, name: name, email: email));
     }
     setState(() => _userId = userId);
     _initMessagesStream();
+
+    // After user is successfully created and initialized, send a welcome message.
+    _handleMessage(
+        "My name is $name"); // Call the function with the user's name
   }
 
   Future<bool> checkServerOrCondition() async {
     try {
-      final response = await http.get(Uri.parse('http://192.168.27.132:5000/'));
+      final response =
+          await http.get(Uri.parse('http://192.168.27.132:5000/health'));
       if (response.statusCode == 200) {
-        // Assuming a 200 status code means the server check passed
+        // Server is running
         return true;
       }
       return false;
@@ -131,47 +134,60 @@ class _ChatPageState extends State<ChatPage> {
     }
   }
 
-  void _sendMessage() async {
-    final messageText = _messageController.text.trim();
+  Future<void> _handleMessage(String messageText,
+      {bool initialMessage = false}) async {
     if (_isWaitingForResponse || messageText.isEmpty) return;
-    _isWaitingForResponse = true;
-    _messageController.clear();
+    setState(() => _isWaitingForResponse = true);
 
-    try {
-      // Assuming isNewChat determines if the chat is new or ongoing
+    // If it's the initial message, we don't need to clear the text field or send the user's message to Firebase
+    if (!initialMessage) {
+      _messageController.clear();
       await _firebaseService.sendMessage(_userId!, messageText,
           fromChatbot: false);
+    }
 
-      final response = await http.post(
-        Uri.parse('http://192.168.27.132:5000/'),
-        headers: <String, String>{
-          'Content-Type': 'application/json; charset=UTF-8',
-        },
-        body: jsonEncode(<String, String>{
-          'message': messageText,
-        }),
-      );
+    try {
+      final response = await http
+          .post(
+            Uri.parse('http://192.168.27.132:5000/chat'),
+            headers: <String, String>{
+              'Content-Type': 'application/json; charset=UTF-8',
+            },
+            body: jsonEncode(<String, String>{
+              'message': messageText,
+            }),
+          )
+          .timeout(const Duration(seconds: 7));
 
       if (response.statusCode == 200) {
         final responseBody = jsonDecode(response.body);
-        //await Future.delayed(const Duration(seconds: 1));
-        await _firebaseService.sendMessage(_userId!, responseBody['reply'],
-            fromChatbot: true);
-      } else {
-        if(mounted){
-          showSnackBar(
-            'Couldn\'t connect to the server:', context);
+        if (responseBody.containsKey('reply')) {
+          await _firebaseService.sendMessage(_userId!, responseBody['reply'],
+              fromChatbot: true);
+        } else {
+          if (mounted) {
+            showSnackBar('Invalid response from the server', context);
+          }
         }
-        
+      } else {
+        if (!mounted) return;
+        showSnackBar('Error from server: ${response.statusCode}', context);
       }
+    } on TimeoutException {
+      if (!mounted) return;
+      showSnackBar('Couldn\'t connect to the server: Timeout', context);
     } catch (e) {
-      if (mounted) {
-        showSnackBar('Error encountered: $e', context);
-      }
+      if (!mounted) return;
+      showSnackBar('Error encountered: $e', context);
     } finally {
       if (mounted) {
-        setState(() => _isWaitingForResponse = false);
-        _scrollToBottom();
+        setState(() {
+          _isWaitingForResponse = false;
+        });
+        // Only scroll to bottom if it's not the initial message
+        if (!initialMessage) {
+          _scrollToBottom();
+        }
       }
     }
   }
@@ -193,23 +209,39 @@ class _ChatPageState extends State<ChatPage> {
               },
             ),
             TextButton(
-              child: const Text('New Chat'),
-              onPressed: () {
-                Navigator.of(context).pop();
-                _messageController.clear();
-                setState(() {
-                  _userId = null;
-                });
-                emailController.clear();
-                nameController.clear();
-                _promptForUserInfo();
-              },
-            ),
+            child: const Text('New Chat'),
+            onPressed: () {
+              // Clearing user data and navigating back to home or restarting chat
+              _resetChat();
+              Navigator.of(context).pop(); // Close the dialog
+              Navigator.of(context).pop(); // Go back to home page or previous page
+              // If you have a specific home page to navigate to, use Navigator.pushReplacement or Navigator.popUntil
+            },
+          ),
           ],
         );
       },
     );
   }
+
+  void _resetChat() {
+  // Clear local user info and messages
+  _messageController.clear();
+  Provider.of<UserProvider>(context, listen: false).clearUser();
+  Provider.of<ChatMessagesProvider>(context, listen: false).clearMessages();
+
+  SharedPreferencesService.clearUserData(); 
+
+  // Reset local state variables if needed
+  setState(() {
+    _userId = null;
+    emailController.clear();
+    nameController.clear();
+    _isWaitingForResponse = false;
+    // Any other state reset you need
+  });
+}
+
 
   bool isSameDay(DateTime date1, DateTime date2) {
     return date1.year == date2.year &&
@@ -335,7 +367,7 @@ class _ChatPageState extends State<ChatPage> {
                     keyboardType: TextInputType.multiline,
                     onSubmitted: (value) {
                       if (!_isWaitingForResponse) {
-                        _sendMessage();
+                        _handleMessage(_messageController.text.trim());
                       }
                     }, // Facilitates line breaks for long messages
                   ),
@@ -345,7 +377,9 @@ class _ChatPageState extends State<ChatPage> {
                       color: _isWaitingForResponse
                           ? Colors.grey
                           : AppColors.btnColor),
-                  onPressed: _isWaitingForResponse ? null : _sendMessage,
+                  onPressed: _isWaitingForResponse
+                      ? null
+                      : () => _handleMessage(_messageController.text.trim()),
                 ),
               ],
             ),

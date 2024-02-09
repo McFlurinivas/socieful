@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:socieful/providers/chat_message_provider.dart';
 import 'package:socieful/providers/user_provider.dart';
+import 'pages/chat_page.dart';
+import 'pages/home_page.dart';
 import 'splash_screen.dart';
 import 'package:socieful/utils/constants.dart';
 
@@ -23,6 +25,10 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => ChatMessagesProvider()),
       ],
       child: MaterialApp(
+        /*routes: {
+          '/home': (context) => const HomePage(),
+          '/chat': (context) => const ChatPage(),
+        },*/
         title: 'SOCIEFUL',
         theme: ThemeData(
           appBarTheme: AppThemes.appBarTheme,

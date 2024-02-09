@@ -1,4 +1,3 @@
-// chat_messages_provider.dart
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -24,6 +23,11 @@ class ChatMessagesProvider with ChangeNotifier {
 
   void setError(Object error) {
     _error = error;
+    notifyListeners();
+  }
+
+  void clearMessages() {
+    _messages.clear();
     notifyListeners();
   }
 }
