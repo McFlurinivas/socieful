@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class FirebaseService {
@@ -35,7 +33,7 @@ class FirebaseService {
     try {
       await _firestore.collection('users').doc(userId).delete();
     } catch (e) {
-      print('Error deleting user: $e');
+      throw Exception('Error: $e');
     }
   }
 
@@ -62,8 +60,7 @@ class FirebaseService {
       // If there are no documents/messages, it's a new chat
       return querySnapshot.docs.isEmpty;
     } catch (e) {
-      print('Error checking if new chat: $e');
-      return false; // Assuming false as default in case of error
+      throw Exception('Error: $e');
     }
   }
 }

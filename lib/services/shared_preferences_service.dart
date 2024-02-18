@@ -19,6 +19,5 @@ class SharedPreferencesService {
     // Remove other user-specific data as needed
   }
 
-  
 }
 

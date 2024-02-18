@@ -1,12 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:socieful/providers/chat_message_provider.dart';
-import 'package:socieful/providers/user_provider.dart';
-import 'pages/chat_page.dart';
-import 'pages/home_page.dart';
+import 'providers/chat_page/chat_message_provider.dart';
+import 'providers/chat_page/user_provider.dart';
+import 'providers/chat_page/server_communication_provider.dart';
 import 'splash_screen.dart';
-import 'package:socieful/utils/constants.dart';
+import 'utils/constants.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -23,12 +22,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => UserProvider()),
         ChangeNotifierProvider(create: (_) => ChatMessagesProvider()),
+        ChangeNotifierProvider(create: (_) => ServerCommunicationProvider()),
       ],
       child: MaterialApp(
-        /*routes: {
-          '/home': (context) => const HomePage(),
-          '/chat': (context) => const ChatPage(),
-        },*/
         title: 'SOCIEFUL',
         theme: ThemeData(
           appBarTheme: AppThemes.appBarTheme,
