@@ -15,8 +15,7 @@ class SharedPreferencesService {
 
   static Future<void> clearUserData() async {
     final prefs = await SharedPreferences.getInstance();
-    await prefs.remove('userId'); // Adjust this key according to how you've saved the userId
-    // Remove other user-specific data as needed
+    await prefs.remove('userId'); 
   }
 
 }

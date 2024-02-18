@@ -22,13 +22,6 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         borderRadius: BorderRadius.only(
             bottomRight: Radius.circular(5), bottomLeft: Radius.circular(5)),
       ),
-      leading: IconButton(
-        icon: const Icon(Icons.menu),
-        tooltip: 'Menu Icon',
-        onPressed: () {
-          
-        },
-      ),
       actions: actions,
       systemOverlayStyle: SystemUiOverlayStyle.light,
     );

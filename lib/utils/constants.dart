@@ -23,7 +23,8 @@ class AppThemes {
 void showSnackBar(String message, BuildContext context) {
   final snackBar = SnackBar(
     content: Text(message),
-    behavior: SnackBarBehavior.floating, // Optional: to float the snackbar
+    behavior: SnackBarBehavior.floating,
+    duration: const Duration(seconds: 2), // Optional: to float the snackbar
   );
   ScaffoldMessenger.of(context).showSnackBar(snackBar);
 }

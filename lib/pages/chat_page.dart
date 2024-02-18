@@ -15,6 +15,7 @@ import '../services/firebase_service.dart';
 import '../widgets/chat_message_tile.dart';
 import 'package:intl/intl.dart';
 import '../widgets/date_separator.dart';
+import 'psychiatrist_page/psychiatrist_page.dart';
 
 class ChatPage extends StatefulWidget {
   const ChatPage({Key? key}) : super(key: key);
@@ -175,7 +176,7 @@ class _ChatPageState extends State<ChatPage> {
             TextButton(
               child: const Text('Consult a Psychiatrist?'),
               onPressed: () {
-                Navigator.of(context).pop();
+                Navigator.of(context).push(MaterialPageRoute(builder: (context) => PsychiatristListPage()));
               },
             ),
             TextButton(

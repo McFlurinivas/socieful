@@ -54,7 +54,7 @@ class FirebaseService {
           .collection('user_chats')
           .doc(userId)
           .collection('messages')
-          .limit(1) // We only need to know if at least one message exists
+          .limit(1)
           .get();
 
       // If there are no documents/messages, it's a new chat
