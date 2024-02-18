@@ -229,10 +229,10 @@ class _ChatPageState extends State<ChatPage> {
     return Scaffold(
       backgroundColor: AppColors.white,
       appBar: CustomAppBar(
-        actions: <IconButton>[
-          IconButton(
-            icon: const Icon(Icons.close),
+        actions: <TextButton>[
+          TextButton(
             onPressed: _terminateChat,
+            child: const Text("Next Stage?"), 
           ),
         ],
       ),
