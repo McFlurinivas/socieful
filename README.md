@@ -80,7 +80,6 @@ Socieful is an application for creating personalized safety plans, offering guid
 
 <table style="width: 100%;">
   <tr>
-  <tr>
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/CxVDW6dw/Screenshot-20240219-215412.jpg" alt="Image 1" style="width: 100%;">
       <p>Home Screen</p>
