@@ -31,8 +31,14 @@ Socieful is a centralized platform aiding harassment victims through confidentia
     </td>
   </tr>
   <tr> 
-    <td style="text-align: center;" colspan="2">
+    <td>
       <img src="https://i.postimg.cc/TP3KJK9m/Screenshot-2024-02-21-230003.png" alt="Support Organizations 3" width="500">
+    </td>
+  </tr>
+  
+  <tr> 
+    <td>
+      <img src="https://i.postimg.cc/TP3KJK9m/Screenshot-2024-02-21-225951.png" alt="Support Organizations 4" width="500">
     </td>
   </tr>
 </table>
@@ -121,4 +127,4 @@ Before you start, make sure you have installed the following on your system:
 - If you feel like needing a human counselor to deal with your situation then click on "Need a Psychiatrist?".
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
-- "Track Your Progress" and "Article" page yet to add.
+- "Track Your Progress" and "Tips" page yet to add.
