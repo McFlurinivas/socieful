@@ -91,6 +91,7 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
     </td>
   </tr>
 </table>
+
 ## Getting Started 🏃‍♀️
 
 Download Socieful directly from this repository. There are two folders:
