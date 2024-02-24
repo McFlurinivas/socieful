@@ -46,7 +46,8 @@ Socieful is a centralized platform aiding harassment victims through confidentia
     
 </tr>
 </table>
-##
+
+## Why Our App? 
 <table style="width: 100%;">
   <tr>
     <td>
