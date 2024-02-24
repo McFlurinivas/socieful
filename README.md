@@ -1,16 +1,10 @@
 # Socieful: Empowering the victims to break the Silence
 
-<div style="display: flex;">
+<div align="center">
   <img src="https://i.postimg.cc/ZqZqvDZz/20240117-154846-0000.jpg" alt="Socieful Logo" width="250" height="200">
 </div>
 
 Socieful is a centralized platform aiding harassment victims through confidential AI chatbot guidance and personalized support recommendations like counsellors and NGOs. It consolidates resources to empower victims with proactive assistance, prioritizing user confidentiality with end-to-end encryption for secure interactions. The platform aims to be a comprehensive solution, facilitating users in navigating tough situations and accessing necessary support.
-
-Watch the product demo on:
-
-<a href="https://www.youtube.com/watch?v=1H82iFD0pHM">
-    <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="LinkedIn Badge"/>
-  </a> 
 
 ## 👉🏻 Initial Survey and Problem Statement Research
 
@@ -20,7 +14,7 @@ Watch the product demo on:
 <table align="center">
   <tr>
     <td>
-      <img src="https://i.postimg.cc/hj3PrMjR/Screenshot-2024-02-21-225931.png" alt="Survey" width="400">
+      <img src="https://i.postimg.cc/hj3PrMjR/Screenshot-2024-02-21-225931.png" alt="Survey" width="500">
     </td>
   </tr>
 </table>
@@ -37,13 +31,13 @@ Watch the product demo on:
     </td>
   </tr>
   <tr> 
-    <td style="text-align: center;" colspan="2" align:"center">
-      <img src="https://i.postimg.cc/TP3KJK9m/Screenshot-2024-02-21-230003.png" alt="Support Organizations 3" width="400">
+    <td style="text-align: center;" colspan="2">
+      <img src="https://i.postimg.cc/TP3KJK9m/Screenshot-2024-02-21-230003.png" alt="Support Organizations 3" width="600">
     </td>
   </tr>
 </table>
 
-The collected data from a survey of 70 individuals presents a concerning picture of harassment prevalence, with a significant majority having experienced verbal and physical harassment. It also highlights a substantial gap in support-seeking behaviour post-harassment, with more than half of the affected individuals choosing not to seek help. For those who did, friends and family were the primary source of support. Satisfaction with the received support was moderately rated by the largest group of respondents, but the overall satisfaction spectrum indicates a diversity in the quality or effectiveness of the support systems in place. This survey underscores the importance of accessible and effective support mechanisms for individuals who experience harassment.
+The collected data from a survey of 70 individuals presents a concerning picture of harassment prevalence, with a significant majority having experienced verbal and physical harassment. It also highlights a substantial gap in support-seeking behavior post-harassment, with more than half of the affected individuals choosing not to seek help. For those who did, friends and family were the primary source of support. Satisfaction with the received support was moderately rated by the largest group of respondents, but the overall satisfaction spectrum indicates a diversity in the quality or effectiveness of the support systems in place. This survey underscores the importance of accessible and effective support mechanisms for individuals who experience harassment.
 
 ## Why Our App? 
 
@@ -70,26 +64,26 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
 - **Progress Tracking and Emotional Visualization**: Our platform tracks user progression through each session and provides visual representations of emotional states, empowering users with insights into their journey and fostering self-awareness and growth.
 - **User-Friendly UI Promoting Positivity**: With a user-friendly interface designed to promote positivity, our platform offers intuitive navigation and visual cues that guide users towards a supportive and empowering experience.
 
-## SOME SCREENSHOTS OF SOCIEFUL
+## Some Screenshots of SOCIEFUL
 
 <table align="center">
   <tr>
     <td>
-      <img src="https://i.postimg.cc/kMFYJpyY/home-page.gif" alt="Home Page" width="400">
+      <img src="https://i.postimg.cc/kMFYJpyY/home-page.gif" alt="Home Page" width="300">
       <p align="center">Home Page</p>
     </td>
     <td>
-      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="Chat Page" width="400">
+      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="RAKSHAK: Our ChatBot" width="300">
       <p align="center">RAKSHAK: Our ChatBot</p>
     </td>
   </tr>
   <tr>
     <td>
-      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Counselor Page" width="400">
-      <p align="center">Booking Counselor Appointment Page</p>
+      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Booking Counsellor Appointment Page" width="300">
+      <p align="center">Booking Counsellor Appointment Page</p>
     </td>
     <td>
-      <img src="https://i.postimg.cc/28MMKXFH/helpline-page.gif" alt="Helpline Page" width="400">
+      <img src="https://i.postimg.cc/28MMKXFH/helpline-page.gif" alt="HelpLine Page" width="300">
       <p align="center">HelpLine Page</p>
     </td>
   </tr>
@@ -98,8 +92,8 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
 ## Getting Started 🏃‍♀️
 
 Download Socieful directly from this repository. There are two folders:
-- chatgpt_server folder contains the logic behind the chatbot in app.py.
-- Socieful_app folder contains the code for the app in lib folder which is properly coded for readability.
+ - chatgpt_server folder contains the logic behind the chatbot in app.py.
+ - Socieful_app folder contains the code for the app in lib folder which is properly coded for readability.
 
 ### Prerequisites 📝
 
@@ -109,7 +103,7 @@ Before you start, make sure you have installed the following on your system:
 - VS Code
 - Dart and Flutter extensions for VS Code
 - Android emulator or physical device
-- The chatbot server is already deployed using Heroku so need to run that file
+- The chatbot server is already deployed using Heroku so no need to run that file.
 
 ### Installation 🛠️
 
@@ -124,6 +118,6 @@ Before you start, make sure you have installed the following on your system:
 - Add a name and email id.
 - Now experience our chatbot RAKSHAK.
 - You can terminate the existing chat by clicking on "next stage?" on the chat page and clicking on "New Chat".
-- If you feel like needing a human counsellor to deal with your situation then click on "Need a Psychiatrist?".
+- If you feel like needing a human counselor to deal with your situation then click on "Need a Psychiatrist?".
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
