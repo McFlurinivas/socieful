@@ -97,10 +97,10 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
   </tr>
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Image 8" style="width: 100%;">
-      <p>Booking Counsellor Appointment Paget</p>
+      <p>Booking Counsellor Appointment Page</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/28MMKXFH/Whats-App-Video-2024-02-25-at-00-48-09-e26e0702-1.gif" alt="Image 8" style="width: 100%;">
+      <img src="https://i.postimg.cc/28MMKXFH/helpline-page.gif" alt="Image 8" style="width: 100%;">
       <p>HelpLine Page</p>
     </td>
     
