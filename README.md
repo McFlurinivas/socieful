@@ -37,7 +37,7 @@ Watch the product demo on:
     </td>
   </tr>
   <tr> 
-    <td style="text-align: center;" colspan="2">
+    <td style="text-align: center;" colspan="2" align:"center">
       <img src="https://i.postimg.cc/TP3KJK9m/Screenshot-2024-02-21-230003.png" alt="Support Organizations 3" width="400">
     </td>
   </tr>
