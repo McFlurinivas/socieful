@@ -91,7 +91,9 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
     </td>
   </tr>
 </table>
-
+<div align="center">
+  <img src="https://i.postimg.cc/zvsN5hGs/helpline-page.gif" width="250" height="200">
+</div>
 ## Getting Started 🏃‍♀️
 
 Download Socieful directly from this repository. There are two folders:
