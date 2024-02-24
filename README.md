@@ -42,12 +42,11 @@ Socieful is a centralized platform aiding harassment victims through confidentia
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/tRKVGCqQ/Screenshot-2024-02-21-225951.png" alt="Image 3" style="width: 100%;">
     </td>
-<p>The collected data from a survey of 70 individuals presents a concerning picture of harassment prevalence, with a significant majority having experienced verbal and physical harassment. It also highlights a substantial gap in support-seeking behavior post-harassment, with more than half of the affected individuals choosing not to seek help. For those who did, friends and family were the primary source of support. Satisfaction with the received support was moderately rated by the largest group of respondents, but the overall satisfaction spectrum indicates a diversity in the quality or effectiveness of the support systems in place. This survey underscores the importance of accessible and effective support mechanisms for individuals who experience harassment.</p>
+<p>The collected data from a survey of 70 individuals presents a concerning picture of harassment prevalence, with a significant majority having experienced verbal and physical harassment. It also highlights a substantial gap in support-seeking behaviour post-harassment, with more than half of the affected individuals choosing not to seek help. For those who did, friends and family were the primary source of support. Satisfaction with the received support was moderately rated by the largest group of respondents, but the overall satisfaction spectrum indicates a diversity in the quality or effectiveness of the support systems in place. This survey underscores the importance of accessible and effective support mechanisms for individuals who experience harassment.</p>
     
 </tr>
 </table>
-
-<Moreover
+##
 <table style="width: 100%;">
   <tr>
     <td>
@@ -55,7 +54,16 @@ Socieful is a centralized platform aiding harassment victims through confidentia
     </td>
   </tr>
 </table>
+<p>We understand that while many are aware of existing support platforms for harassment victims, SOCIEFUL stands out in this crucial space. With a user-centric design, SOCIEFUL harnesses the power of AI to offer personalized support that goes beyond generic advice. Our platform offers:
 
+- **Immediate Assistance**: Our AI-driven chatbot is available 24/7, providing real-time support and guidance, which is crucial during times when immediate help is needed.
+- **Professional Counseling**: Access to qualified counsellors for one-on-one sessions offers a level of professional care that many platforms don't provide.
+- **Comprehensive Support Network**: We connect users not just to counselling but also to NGOs, financial aid, and legal resources, all in one place.
+- **Privacy and Security**: Your conversations and data are confidential, ensuring a safe space to discuss sensitive issues without judgment or stigma.
+- **Community and Empowerment**: SOCIEFUL is more than an app; it's a community. It empowers users with educational resources, workshops, and stories of resilience.
+- **Continuous Improvement**: Our platform learns and evolves, using feedback to improve the support and resources available to users.
+
+By choosing SOCIEFUL, you're not just using an app; you're joining a movement to change how society supports harassment victims. Let SOCIEFUL be the ally in your pocket, standing ready to support you whenever and wherever you need it.</p>
 
 ## Features
 
@@ -91,7 +99,7 @@ Socieful is a centralized platform aiding harassment victims through confidentia
       <p>Booking Counsellor Appointment Paget</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/cLr6HpCR/Whats-App-Image-2024-02-21-at-00-15-31-3e1dfacd.jpg" alt="Image 8" style="width: 100%;">
+      <img src="https://i.postimg.cc/28MMKXFH/Whats-App-Video-2024-02-25-at-00-48-09-e26e0702-1.gif" alt="Image 8" style="width: 100%;">
       <p>HelpLine Page</p>
     </td>
     
