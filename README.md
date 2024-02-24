@@ -47,6 +47,7 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 </tr>
 </table>
 
+<Moreover
 <table style="width: 100%;">
   <tr>
     <td>
@@ -77,7 +78,7 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/CxVDW6dw/Screenshot-20240219-215412.jpg" alt="Image 1" style="width: 100%;">
+      <img src="https://i.postimg.cc/kMFYJpyY/home-page.gif" alt="Image 1" style="width: 100%;">
       <p>Home Screen</p>
     </td>
     <td style="text-align: center;">
