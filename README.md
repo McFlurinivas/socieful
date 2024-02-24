@@ -12,13 +12,10 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 
 <hr>
 
-- A secure and anonymous chat platform connecting users with trained couselors and NGO'S who can provide offering guidance and shelter on 
-  steps to take during and after incidents of domestic violence.
-- Encrypted and secure communication channels for victims to seek help and support from counselors.
-- Read past Articles, Inspirational stories, Safety measures, etc.
-- A dedicated section for users to store counselors contacts, making it quick and easy to reach out for help in critical situations.
-- Give Feedback of the application how it helped the victim for betterment.
-- Register their complaints(Regarding services).
+- A secure and anonymous chat platform connecting users to engage in confidential chats for initial counselling with the AI chatbot providing tailored counselling.
+- Offering victims the option to connect with human counsellors alongside the AI chatbot provides flexibility, ensuring individuals can seek support in a way that aligns with their comfort and preferences.
+- A dedicated section for users to access Indian helpline numbers.
+- Tracking the user's progression after every section and giving them a pictorial representation of his emotions.
 - RAKSHAK - AI Support Chatbot.
 - User Friendly UI promoting and indicating POSITIVENESS.
 
