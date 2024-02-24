@@ -66,24 +66,24 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
 
 ## Some Screenshots of SOCIEFUL
 
-<table align="center">
+<table style="width: 100%;">
   <tr>
-    <td>
-      <img src="https://i.postimg.cc/kMFYJpyY/home-page.gif" alt="Home Page" width="300">
+    <td style="text-align: center;">
+      <img src="https://i.postimg.cc/kMFYJpyY/home-page.gif" alt="Home Page" style="width: 100%;">
       <p align="center">Home Page</p>
     </td>
-    <td>
-      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="RAKSHAK: Our ChatBot" width="300">
+    <td style="text-align: center;">
+      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="RAKSHAK: Our ChatBot" style="width: 100%;">
       <p align="center">RAKSHAK: Our ChatBot</p>
     </td>
   </tr>
   <tr>
-    <td>
-      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Booking Counsellor Appointment Page" width="300">
+    <td style="text-align: center;">
+      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Booking Counsellor Appointment Page" style="width: 100%;">
       <p align="center">Booking Counsellor Appointment Page</p>
     </td>
-    <td>
-      <img src="https://i.postimg.cc/28MMKXFH/helpline-page.gif" alt="HelpLine Page" width="300">
+    <td style="text-align: center;">
+      <img src="https://i.postimg.cc/28MMKXFH/helpline-page.gif" alt="HelpLine Page" style="width: 100%;">
       <p align="center">HelpLine Page</p>
     </td>
   </tr>
@@ -121,3 +121,4 @@ Before you start, make sure you have installed the following on your system:
 - If you feel like needing a human counselor to deal with your situation then click on "Need a Psychiatrist?".
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
+- "Track Your Progress" and "Article" page yet to add.
