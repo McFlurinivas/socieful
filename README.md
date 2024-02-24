@@ -91,18 +91,19 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
       <p>Home Page</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="Image 8" style="width: 100%;">
+      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="RAKSHAK: Our ChatBot" style="width: 100%;">
       <p>RAKSHAK: Our ChatBot</p>
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Image 8" style="width: 100%;">
+      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Booking Counsellor Appointment Page" style="width: 100%;">
       <p>Booking Counsellor Appointment Page</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/28MMKXFH/helpline-page.gif" alt="Image 8" style="width: 100%;">
+      <img src="https://i.postimg.cc/28MMKXFH/helpline-page.gif" alt="HelpLine Page" style="width: 100%;">
       <p>HelpLine Page</p>
     </td>
   </tr>
 </table>
+
