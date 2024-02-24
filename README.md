@@ -24,15 +24,15 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 <table align="center">
   <tr>
     <td>
-      <img src="https://i.postimg.cc/NfjZYYpD/Screenshot-2024-02-21-230045.png" alt="Support Organizations" width="400">
+      <img src="https://i.postimg.cc/NfjZYYpD/Screenshot-2024-02-21-230045.png" alt="Support Organizations" width="500">
     </td>
     <td>
-      <img src="https://i.postimg.cc/RZVSjjHx/Screenshot-2024-02-21-230014.png" alt="Support Organizations 2" width="400">
+      <img src="https://i.postimg.cc/RZVSjjHx/Screenshot-2024-02-21-230014.png" alt="Support Organizations 2" width="500">
     </td>
   </tr>
   <tr> 
     <td style="text-align: center;" colspan="2">
-      <img src="https://i.postimg.cc/TP3KJK9m/Screenshot-2024-02-21-230003.png" alt="Support Organizations 3" width="600">
+      <img src="https://i.postimg.cc/TP3KJK9m/Screenshot-2024-02-21-230003.png" alt="Support Organizations 3" width="500">
     </td>
   </tr>
 </table>
@@ -42,7 +42,7 @@ The collected data from a survey of 70 individuals presents a concerning picture
 ## Why Our App? 
 
 <div align="center">
-  <img src="https://i.postimg.cc/2y89zFFy/Screenshot-2024-02-21-230104.png" alt="App Features" width="400">
+  <img src="https://i.postimg.cc/2y89zFFy/Screenshot-2024-02-21-230104.png" alt="App Features" width="500">
 </div>
 
 We understand that while many are aware of existing support platforms for harassment victims, SOCIEFUL stands out in this crucial space. With a user-centric design, SOCIEFUL harnesses the power of AI to offer personalized support that goes beyond generic advice. Our platform offers:
