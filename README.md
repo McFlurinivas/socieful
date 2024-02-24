@@ -79,24 +79,20 @@ Socieful is a centralized platform aiding harassment victims through confidentia
   <tr>
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/kMFYJpyY/home-page.gif" alt="Image 1" style="width: 100%;">
-      <p>Home Screen</p>
+      <p>Home Page</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/0QZcQ1MG/Screenshot-20240219-215422.jpg" alt="Image 8" style="width: 100%;">
-      <p>Login Screen</p>
+      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="Image 8" style="width: 100%;">
+      <p>RAKSHAK: Our ChatBot</p>
     </td>
   </tr>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/Qdy9JXwY/Whats-App-Image-2024-02-21-at-00-15-32-20cf5924.jpg" alt="Image 8" style="width: 100%;">
-      <p>RAKSHAK: Our ChatBot</p>
+      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Image 8" style="width: 100%;">
+      <p>Booking Counsellor Appointment Paget</p>
     </td>
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/cLr6HpCR/Whats-App-Image-2024-02-21-at-00-15-31-3e1dfacd.jpg" alt="Image 8" style="width: 100%;">
-      <p>Counsellors</p>
-    </td>
-    <td style="text-align: center;">
-      <img src="https://i.postimg.cc/Hx2T3zjW/Whats-App-Image-2024-02-21-at-00-15-30-92c48032.jpg" alt="Image 8" style="width: 100%;">
-      <p>Counsellor Details</p>
+      <p>HelpLine Page</p>
     </td>
     
   </tr>
