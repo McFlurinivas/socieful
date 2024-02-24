@@ -6,7 +6,7 @@
 
 </div>
 
-Socieful is an application for creating personalized safety plans, offering guidance on steps to take during and after incidents of all sort of domestic violence. It will secure user details and provide anonymous chat platform connecting users with trained counselors or volunteers who can provide immediate support and guidance.
+Socieful is a centralized platform aiding harassment victims through confidential AI chatbot guidance and personalized support recommendations like counselors and NGOs.It consolidates resources to empower victims with proactive assistance, prioritizing user confidentiality with end-to-end encryption for secure interactions. The platform aims to be a comprehensive solution, facilitating users in navigating tough situations and accessing necessary support.
 
 ## Features
 
