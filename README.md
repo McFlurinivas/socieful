@@ -23,19 +23,19 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 
 <table style="width: 100%;">
   <tr>
-    <td>
-      <img src="https://i.postimg.cc/NfjZYYpD/Screenshot-2024-02-21-230045.png" width="500">
+    <td style="text-align: center;">
+      <img src="https://i.postimg.cc/tRKVGCqQ/Screenshot-2024-02-21-225951.png" alt="Image 3" width="500">
     </td>
-    <td>
-      <img src="https://i.postimg.cc/RZVSjjHx/Screenshot-2024-02-21-230014.png" alt="Image 8" width="500">
-    </td>
-  </tr>
-  <tr> 
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/TP3KJK9m/Screenshot-2024-02-21-230003.png" alt="Image 2" width="500">  
     </td>
-    <td style="text-align: center;">
-      <img src="https://i.postimg.cc/tRKVGCqQ/Screenshot-2024-02-21-225951.png" alt="Image 3" width="500">
+  </tr>
+  <tr> 
+    <td>
+      <img src="https://i.postimg.cc/RZVSjjHx/Screenshot-2024-02-21-230014.png" alt="Image 8" width="500">
+    </td>
+    <td>
+      <img src="https://i.postimg.cc/NfjZYYpD/Screenshot-2024-02-21-230045.png" width="500">
     </td>
   </tr>
 </table>
