@@ -7,39 +7,23 @@
 </div>
 
 Socieful is a centralized platform aiding harassment victims through confidential AI chatbot guidance and personalized support recommendations like counsellors and NGOs.It consolidates resources to empower victims with proactive assistance, prioritizing user confidentiality with end-to-end encryption for secure interactions. The platform aims to be a comprehensive solution, facilitating users in navigating tough situations and accessing necessary support.
-
-## Features
-
-<hr>
-
-- **RAKSHAK - AI Support Chatbot**: Introducing RAKSHAK, our AI support chatbot, designed to provide compassionate and effective counselling tailored to user needs, further enhancing accessibility and support for our users.
-
-- **Flexible Support Options**: In addition to the AI chatbot, users have the option to connect with human counsellors, ensuring a personalized and flexible approach to seeking support that prioritizes individual comfort and preferences.
-
-- **Dedicated Section for Indian Helpline Numbers**: We feature a dedicated section within our platform for users to access Indian helpline numbers, providing easy access to vital resources for those in need of immediate assistance.
-
-- **Progress Tracking and Emotional Visualization**: Our platform tracks user progression through each session and provides visual representations of emotional states, empowering users with insights into their journey and fostering self-awareness and growth.
-
-- **User-Friendly UI Promoting Positivity**: With a user-friendly interface designed to promote positivity, our platform offers intuitive navigation and visual cues that guide users towards a supportive and empowering experience.
-
-<hr>
+  
 
 ## 👉🏻 Initial Survey and Problem Statement Research
+
+- The Form was circulated carefully to ensure that the intended demographic received it.
+- Best efforts to ensure that only respondents who identify as all people including (young, middle-aged and old aged) are polled.
 
 <table style="width: 100%;">
   <tr>
     <td>
       <img src="https://i.postimg.cc/hj3PrMjR/Screenshot-2024-02-21-225931.png" alt="Image 1" style="width: 50%;">
       <p> </p>
-      <p> We discovered that a lot of our peers have gone through harassment. And in the stats ,more than half have raised there consents. </p>
+      <p> The survey conducted on harassment experiences reveals a significant portion of the respondents have encountered some form of harassment, with 58.6% affirming they have experienced it. A smaller, yet notable, fraction of the population, 24.3%, confidently states they have not faced harassment. Meanwhile, 17.1% of participants express ambivalence, choosing 'Maybe,' which may imply conditional instances of harassment or uncertainty in defining their experiences. This data underscores the prevalence of harassment in various forms and suggests a need for further research and discussion on this critical issue. </p>
     </td>
   </tr>
 </table>
 
-##  Public Opinion
-
-- The Form was circulated carefully to ensure that the intended demographic received it.
-- Best efforts to ensure that only respondents who identify as all people including (young, middle aged and old aged) are polled.
 
 ## 🔴AWARENESS OF ORGANISATIONS TO PROVIDE SUPPORT TO THE VICTIMS
 
@@ -53,9 +37,9 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 
 <table style="width: 100%;">
   <tr>
-    <p>🟥 Along with building an innovative society, SOCIEFUL assist harassment victims by providing online counselors and connecting them with relevant NGOs. It has become an integral part of modern life, shaping behaviors and perceptions. </p>
-    <p>🟥 The platform can offer real-time chat, video, or phone counseling sessions with trained professionals who specialize in assisting harassment victims.</p>
-    <p>🟥 The platform can implement robust security measures to protect user’s personal information and ensure confidentiality during counseling sessions.</p>
+    <p>🟥 Along with building an innovative society, SOCIEFUL assist harassment victims by providing online counsellors and connecting them with relevant NGOs. It has become an integral part of modern life, shaping behaviours and perceptions. </p>
+    <p>🟥 The platform can offer real-time chat, video, or phone counselling sessions with trained professionals who specialize in assisting harassment victims.</p>
+    <p>🟥 The platform can implement robust security measures to protect user’s personal information and ensure confidentiality during counselling sessions.</p>
     <p>🟥 It platform can engage in awareness campaigns to educate the public about harassment, its impact, and the available support services.</p>
       <td>
       <img src="https://i.postimg.cc/NfjZYYpD/Screenshot-2024-02-21-230045.png" style="width: 100%;">
@@ -76,6 +60,21 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 </tr>
 </table>
 
+## Features
+
+<hr>
+
+- **RAKSHAK - AI Support Chatbot**: Introducing RAKSHAK, our AI support chatbot, designed to provide compassionate and effective counselling tailored to user needs, further enhancing accessibility and support for our users.
+
+- **Flexible Support Options**: In addition to the AI chatbot, users have the option to connect with human counsellors, ensuring a personalized and flexible approach to seeking support that prioritizes individual comfort and preferences.
+
+- **Dedicated Section for Indian Helpline Numbers**: We feature a dedicated section within our platform for users to access Indian helpline numbers, providing easy access to vital resources for those in need of immediate assistance.
+
+- **Progress Tracking and Emotional Visualization**: Our platform tracks user progression through each session and provides visual representations of emotional states, empowering users with insights into their journey and fostering self-awareness and growth.
+
+- **User-Friendly UI Promoting Positivity**: With a user-friendly interface designed to promote positivity, our platform offers intuitive navigation and visual cues that guide users towards a supportive and empowering experience.
+
+<hr>
 
 ## SOME SCREENSHOTS OF SOCIEFUL
 
