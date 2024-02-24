@@ -26,21 +26,8 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 
 
 ## 🔴AWARENESS OF ORGANISATIONS TO PROVIDE SUPPORT TO THE VICTIMS
-
 <table style="width: 100%;">
   <tr>
-    <td>
-      <img src="https://i.postimg.cc/2y89zFFy/Screenshot-2024-02-21-230104.png" alt="Image 1" style="width: 50%;">
-    </td>
-  </tr>
-</table>
-
-<table style="width: 100%;">
-  <tr>
-    <p>🟥 Along with building an innovative society, SOCIEFUL assist harassment victims by providing online counsellors and connecting them with relevant NGOs. It has become an integral part of modern life, shaping behaviours and perceptions. </p>
-    <p>🟥 The platform can offer real-time chat, video, or phone counselling sessions with trained professionals who specialize in assisting harassment victims.</p>
-    <p>🟥 The platform can implement robust security measures to protect user’s personal information and ensure confidentiality during counselling sessions.</p>
-    <p>🟥 It platform can engage in awareness campaigns to educate the public about harassment, its impact, and the available support services.</p>
       <td>
       <img src="https://i.postimg.cc/NfjZYYpD/Screenshot-2024-02-21-230045.png" style="width: 100%;">
     </td>
@@ -55,10 +42,19 @@ Socieful is a centralized platform aiding harassment victims through confidentia
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/tRKVGCqQ/Screenshot-2024-02-21-225951.png" alt="Image 3" style="width: 100%;">
     </td>
-
+<p>The collected data from a survey of 70 individuals presents a concerning picture of harassment prevalence, with a significant majority having experienced verbal and physical harassment. It also highlights a substantial gap in support-seeking behavior post-harassment, with more than half of the affected individuals choosing not to seek help. For those who did, friends and family were the primary source of support. Satisfaction with the received support was moderately rated by the largest group of respondents, but the overall satisfaction spectrum indicates a diversity in the quality or effectiveness of the support systems in place. This survey underscores the importance of accessible and effective support mechanisms for individuals who experience harassment.</p>
     
 </tr>
 </table>
+
+<table style="width: 100%;">
+  <tr>
+    <td>
+      <img src="https://i.postimg.cc/2y89zFFy/Screenshot-2024-02-21-230104.png" alt="Image 1" style="width: 50%;">
+    </td>
+  </tr>
+</table>
+
 
 ## Features
 
