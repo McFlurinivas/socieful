@@ -40,7 +40,7 @@ Socieful is a centralized platform aiding harassment victims through confidentia
   </tr>
 </table>
 
-The collected data from a survey of 70 individuals presents a concerning picture of harassment prevalence, with a significant majority having experienced verbal and physical harassment. It also highlights a substantial gap in support-seeking behavior post-harassment, with more than half of the affected individuals choosing not to seek help. For those who did, friends and family were the primary source of support. Satisfaction with the received support was moderately rated by the largest group of respondents, but the overall satisfaction spectrum indicates a diversity in the quality or effectiveness of the support systems in place. This survey underscores the importance of accessible and effective support mechanisms for individuals who experience harassment.
+The collected data from a survey of 70 individuals presents a concerning picture of harassment prevalence, with a significant majority having experienced verbal and physical harassment. It also highlights a substantial gap in support-seeking behaviour post-harassment, with more than half of the affected individuals choosing not to seek help. For those who did, friends and family were the primary source of support. Satisfaction with the received support was moderately rated by the largest group of respondents, but the overall satisfaction spectrum indicates a diversity in the quality or effectiveness of the support systems in place. This survey underscores the importance of accessible and effective support mechanisms for individuals who experience harassment.
 
 ## Why Our App? 
 
@@ -52,7 +52,7 @@ We understand that while many are aware of existing support platforms for harass
 
 - **Immediate Assistance**: Our AI-driven chatbot is available 24/7, providing real-time support and guidance, which is crucial during times when immediate help is needed.
 - **Professional Counseling**: Access to qualified counsellors for one-on-one sessions offers a level of professional care that many platforms don't provide.
-- **Comprehensive Support Network**: We connect users not just to counseling but also to NGOs, financial aid, and legal resources, all in one place.
+- **Comprehensive Support Network**: We connect users not just to counselling but also to NGOs, financial aid, and legal resources, all in one place.
 - **Privacy and Security**: Your conversations and data are confidential, ensuring a safe space to discuss sensitive issues without judgment or stigma.
 - **Community and Empowerment**: SOCIEFUL is more than an app; it's a community. It empowers users with educational resources, workshops, and stories of resilience.
 - **Continuous Improvement**: Our platform learns and evolves, using feedback to improve the support and resources available to users.
@@ -61,8 +61,8 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
 
 ## Features
 
-- **RAKSHAK - AI Support Chatbot**: Introducing RAKSHAK, our AI support chatbot, designed to provide compassionate and effective counseling tailored to user needs, further enhancing accessibility and support for our users.
-- **Flexible Support Options**: In addition to the AI chatbot, users have the option to connect with human counselors, ensuring a personalized and flexible approach to seeking support that prioritizes individual comfort and preferences.
+- **RAKSHAK - AI Support Chatbot**: Introducing RAKSHAK, our AI support chatbot, designed to provide compassionate and effective counselling tailored to user needs, further enhancing accessibility and support for our users.
+- **Flexible Support Options**: In addition to the AI chatbot, users have the option to connect with human counsellors, ensuring a personalized and flexible approach to seeking support that prioritizes individual comfort and preferences.
 - **Dedicated Section for Indian Helpline Numbers**: We feature a dedicated section within our platform for users to access Indian helpline numbers, providing easy access to vital resources for those in need of immediate assistance.
 - **Progress Tracking and Emotional Visualization**: Our platform tracks user progression through each session and provides visual representations of emotional states, empowering users with insights into their journey and fostering self-awareness and growth.
 - **User-Friendly UI Promoting Positivity**: With a user-friendly interface designed to promote positivity, our platform offers intuitive navigation and visual cues that guide users towards a supportive and empowering experience.
@@ -121,7 +121,7 @@ Before you start, make sure you have installed the following on your system:
 - Add a name and email id.
 - Now experience our chatbot RAKSHAK.
 - You can terminate the existing chat by clicking on "next stage?" on the chat page and clicking on "New Chat".
-- If you feel like needing a human counselor to deal with your situation then click on "Need a Psychiatrist?".
+- If you feel like needing a human counsellor to deal with your situation then click on "Need a Psychiatrist?".
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
-- "Track Your Progress" and "Tips" page yet to add.
+- "Track Your Progress" and "Tips" pages are yet to be added.
