@@ -72,21 +72,21 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
 <table style="width: 100%;">
   <tr>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/kMFYJpyY/home-page.gif" alt="Home Page" style="width: 100%;">
+      <img src="https://i.postimg.cc/kMFYJpyY/home-page.gif" alt="Home Page" width: "200">
       <p align="center">Home Page</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="RAKSHAK: Our ChatBot" style="width: 100%;">
+      <img src="https://i.postimg.cc/657026J3/chat-page.gif" alt="RAKSHAK: Our ChatBot" width: "200">
       <p align="center">RAKSHAK: Our ChatBot</p>
     </td>
   </tr>
   <tr>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Booking Counsellor Appointment Page" style="width: 100%;">
+      <img src="https://i.postimg.cc/0QM48Yfk/councellor-page.gif" alt="Booking Counsellor Appointment Page" width: "200">
       <p align="center">Booking Counsellor Appointment Page</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/HLBW73zH/VID-20240225004639-ezgif-com-optimize.gif" alt="HelpLine Page" style="width: 100%;">
+      <img src="https://i.postimg.cc/HLBW73zH/VID-20240225004639-ezgif-com-optimize.gif" alt="HelpLine Page" width: "200">
       <p align="center">HelpLine Page</p>
     </td>
   </tr>
