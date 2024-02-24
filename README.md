@@ -6,18 +6,21 @@
 
 </div>
 
-Socieful is a centralized platform aiding harassment victims through confidential AI chatbot guidance and personalized support recommendations like counselors and NGOs.It consolidates resources to empower victims with proactive assistance, prioritizing user confidentiality with end-to-end encryption for secure interactions. The platform aims to be a comprehensive solution, facilitating users in navigating tough situations and accessing necessary support.
+Socieful is a centralized platform aiding harassment victims through confidential AI chatbot guidance and personalized support recommendations like counsellors and NGOs.It consolidates resources to empower victims with proactive assistance, prioritizing user confidentiality with end-to-end encryption for secure interactions. The platform aims to be a comprehensive solution, facilitating users in navigating tough situations and accessing necessary support.
 
 ## Features
 
 <hr>
 
-- A secure and anonymous chat platform connecting users to engage in confidential chats for initial counselling with the AI chatbot providing tailored counselling.
-- Offering victims the option to connect with human counsellors alongside the AI chatbot provides flexibility, ensuring individuals can seek support in a way that aligns with their comfort and preferences.
-- A dedicated section for users to access Indian helpline numbers.
-- Tracking the user's progression after every section and giving them a pictorial representation of his emotions.
-- RAKSHAK - AI Support Chatbot.
-- User Friendly UI promoting and indicating POSITIVENESS.
+- **RAKSHAK - AI Support Chatbot**: Introducing RAKSHAK, our AI support chatbot, designed to provide compassionate and effective counselling tailored to user needs, further enhancing accessibility and support for our users.
+
+- **Flexible Support Options**: In addition to the AI chatbot, users have the option to connect with human counsellors, ensuring a personalized and flexible approach to seeking support that prioritizes individual comfort and preferences.
+
+- **Dedicated Section for Indian Helpline Numbers**: We feature a dedicated section within our platform for users to access Indian helpline numbers, providing easy access to vital resources for those in need of immediate assistance.
+
+- **Progress Tracking and Emotional Visualization**: Our platform tracks user progression through each session and provides visual representations of emotional states, empowering users with insights into their journey and fostering self-awareness and growth.
+
+- **User-Friendly UI Promoting Positivity**: With a user-friendly interface designed to promote positivity, our platform offers intuitive navigation and visual cues that guide users towards a supportive and empowering experience.
 
 <hr>
 
@@ -28,7 +31,7 @@ Socieful is a centralized platform aiding harassment victims through confidentia
     <td>
       <img src="https://i.postimg.cc/hj3PrMjR/Screenshot-2024-02-21-225931.png" alt="Image 1" style="width: 50%;">
       <p> </p>
-      <p> We discovered that a lot of our peers have gone through hasrassment. And in the stats ,more than half have raised there consents. </p>
+      <p> We discovered that a lot of our peers have gone through harassment. And in the stats ,more than half have raised there consents. </p>
     </td>
   </tr>
 </table>
