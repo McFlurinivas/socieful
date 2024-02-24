@@ -92,7 +92,7 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
   </tr>
 </table>
 <div align="center">
-  <img src="https://i.postimg.cc/zvsN5hGs/helpline-page.gif" width="250" height="200">
+  <img src="https://i.postimg.cc/zvsN5hGs/helpline-page.gif" alt="HelpLine Page" style="width: 100%;">
 </div>
 ## Getting Started 🏃‍♀️
 
