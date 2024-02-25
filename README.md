@@ -93,7 +93,7 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
   <tr>
     <td colspan="2">
       <img src="https://i.postimg.cc/fRfpZvxp/firebase.gif" alt="Firebase">
-      <p align="center">Cloud Firestore Setup</p>
+      <p align="center">Firestore Database Setup</p>
     </td>
   </tr>
 </table>
