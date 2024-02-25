@@ -6,6 +6,13 @@
 
 Socieful is a centralized platform aiding harassment victims through confidential AI chatbot guidance and personalized support recommendations like counsellors and NGOs. It consolidates resources to empower victims with proactive assistance, prioritizing user confidentiality with end-to-end encryption for secure interactions. The platform aims to be a comprehensive solution, facilitating users in navigating tough situations and accessing necessary support.
 
+Watch the product demo on YouTube:
+<div>
+  <a href="https://youtu.be/e0GYUq50wYQ?feature=shared">
+    <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="LinkedIn Badge"/>
+  </a> 	
+</div>
+
 ## 👉🏻 Initial Survey and Problem Statement Research
 
 - The Form was circulated carefully to ensure that the intended demographic received it.
