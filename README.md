@@ -86,7 +86,7 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
       <p align="center">Booking Counsellor Appointment Page</p>
     </td>
     <td style="text-align: center;">
-      <img src="https://i.postimg.cc/B8PfrTRw/helpline-page.gif" alt="HelpLine Page" width="200" height='200>
+      <img src="https://i.postimg.cc/B8PfrTRw/helpline-page.gif" alt="HelpLine Page" width="200" height="200">
       <p align="center">HelpLine Page</p>
     </td>
   </tr>
