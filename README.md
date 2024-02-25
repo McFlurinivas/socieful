@@ -1,7 +1,7 @@
 # Socieful: Empowering the victims to break the Silence
 
 <div align="center">
-  <img src="https://i.postimg.cc/wvwFbfYc/logo.gif" alt="Socieful Logo" width="250" height="200">
+  <img src="https://i.postimg.cc/wvwFbfYc/logo.gif" alt="Socieful Logo" width="250" height="250">
 </div>
 
 Socieful is a centralized platform aiding harassment victims through confidential AI chatbot guidance and personalized support recommendations like counsellors and NGOs. It consolidates resources to empower victims with proactive assistance, prioritizing user confidentiality with end-to-end encryption for secure interactions. The platform aims to be a comprehensive solution, facilitating users in navigating tough situations and accessing necessary support.
@@ -88,6 +88,11 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/B8PfrTRw/helpline-page.gif" alt="HelpLine Page" width="200">
       <p align="center">HelpLine Page</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <img src="https://i.postimg.cc/QNBnyDVF/track-page.gif" alt="Track Page" width="200">
     </td>
   </tr>
   <tr>
