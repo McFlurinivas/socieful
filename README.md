@@ -91,20 +91,18 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
     </td>
   </tr>
   <tr>
-    <td colspan="2">
+    <td colspan="2" style="text-align: center;">
       <img src="https://i.postimg.cc/QNBnyDVF/track-page.gif" alt="Track Page" width="200" align="center">
       <p align="center">Track Page (Overview. Yet To Be Developed)</p>
     </td>
   </tr>
   <tr>
-    <td colspan="2">
+    <td colspan="2" style="text-align: center;">
       <img src="https://i.postimg.cc/fRfpZvxp/firebase.gif" alt="Firebase">
       <p align="center">Firestore Database Setup</p>
     </td>
   </tr>
 </table>
-
-
 
 
 ## Getting Started 🏃‍♀️
