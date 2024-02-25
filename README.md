@@ -8,7 +8,7 @@ Socieful is a centralized platform aiding harassment victims through confidentia
 
 Watch the product demo on YouTube:
 <div>
-  <a href="https://youtu.be/e0GYUq50wYQ?feature=shared">
+  <a href="https://youtu.be/cvCEpHwllF8?si=qetZ-h89XFWW2M8b">
     <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="LinkedIn Badge"/>
   </a> 	
 </div>
