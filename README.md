@@ -87,12 +87,13 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
     </td>
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/B8PfrTRw/helpline-page.gif" alt="HelpLine Page" width="200">
-      <p align="center">HelpLine Page</p>
+      <p align="center">HelpLine Page (Just Design Idea)</p>
     </td>
   </tr>
   <tr>
     <td colspan="2">
-      <img src="https://i.postimg.cc/QNBnyDVF/track-page.gif" alt="Track Page" width="200">
+      <img src="https://i.postimg.cc/QNBnyDVF/track-page.gif" alt="Track Page" width="200" align="center">
+      <p align="center">Track Page (Overview. Yet To Be Developed)</p>
     </td>
   </tr>
   <tr>
@@ -135,7 +136,7 @@ Before you start, make sure you have installed the following on your system:
 - Add a name and email id.
 - Now experience our chatbot RAKSHAK.
 - You can terminate the existing chat by clicking on "next stage?" on the chat page and clicking on "New Chat".
-- If you feel like needing a human counsellor to deal with your situation then click on "Need a Psychiatrist?".
+- If you feel like needing a human counsellor to deal with your situation then click on "Need a Psychiatrist?" (The psychiatrist page has just the UI).
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
 - "Track Your Progress" and "Tips" pages are yet to be added.
