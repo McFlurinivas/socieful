@@ -21,7 +21,7 @@ client.fine_tuning.jobs.create(
   model="gpt-3.5-turbo",
 )
 """
-
+# code behind the chatgpt api
 import os
 from flask import Flask, request, jsonify
 from openai import OpenAI
@@ -45,7 +45,7 @@ def chat():
         "Only suggest seeing a psychiatrist for more severe cases. "
         "Do not entertain unrelated or unusual prompts. "
         "Reference and build upon previous interactions to maintain continuity in the conversation."
-      )
+      )#Prompt engineering. In future we will add fine tuning algorithm to make the chatbot more human like
       try:
           response = client.chat.completions.create(
             model="gpt-3.5-turbo",
@@ -54,7 +54,7 @@ def chat():
                 {"role": "user", "content": f"{user_message}"},
             ],
             temperature=0.8
-          )
+          )#getting message from user and getting response from chatgpt
           print(response.choices[0].message.content)
           return jsonify({"reply": response.choices[0].message.content})
       except Exception as e:
@@ -63,7 +63,7 @@ def chat():
     else:
         return jsonify({"error": "Method Not Allowed"}), 405
     
-@app.route('/health', methods=['GET'])
+@app.route('/health', methods=['GET'])#checking if the server is running
 def health_check():
     return jsonify({"status": "Server is running"}), 200
 

@@ -134,16 +134,16 @@ class _ChatPageState extends State<ChatPage> {
     if (!initialMessage) {
       _messageController.clear();
       await _firebaseService.sendMessage(_userId!, messageText,
-          fromChatbot: false);
+          fromChatbot: false);//sending the user message to firebase
     }
 
     try {
       if (!context.mounted) return;
       final String? reply =
           await Provider.of<ServerCommunicationProvider>(context, listen: false)
-              .postMessage(messageText);
+              .postMessage(messageText);//calling the psotMessage function to send the message to chatgpt api
       if (reply != null) {
-        await _firebaseService.sendMessage(_userId!, reply, fromChatbot: true);
+        await _firebaseService.sendMessage(_userId!, reply, fromChatbot: true);//sending the chatbot reply to firebase
       } else {
         if (context.mounted) {
           showSnackBar('Invalid response from the server', context);
@@ -241,7 +241,7 @@ class _ChatPageState extends State<ChatPage> {
           Expanded(
             child: _userId == null
                 ? const Center(child: CircularProgressIndicator())
-                : Consumer<ChatMessagesProvider>(
+                : Consumer<ChatMessagesProvider>(//streaming all the messages from firebase
                     builder: (_, provider, __) {
                       if (provider.isLoading) {
                         return const Center(child: CircularProgressIndicator());

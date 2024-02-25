@@ -4,10 +4,10 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
-class ServerCommunicationProvider with ChangeNotifier {
-  final String _serverURL = 'http://192.168.144.132:5000';
+class ServerCommunicationProvider with ChangeNotifier {//This is the code sending the prompt to chatgpt api
+  final String _serverURL = 'https://socieful-a455c1e16699.herokuapp.com/';
 
-  Future<bool> checkServerHealth() async {
+  Future<bool> checkServerHealth() async {//Checking if the server is running
     try {
       final response = await http.get(Uri.parse('$_serverURL/health'));
       return response.statusCode == 200;
@@ -16,7 +16,7 @@ class ServerCommunicationProvider with ChangeNotifier {
     }
   }
 
-  Future<String?> postMessage(String message) async {
+  Future<String?> postMessage(String message) async {//posting the message to chatgpt api
     try {
       final response = await http.post(
         Uri.parse('$_serverURL/chat'),
