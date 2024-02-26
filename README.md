@@ -1,11 +1,19 @@
 # Socieful: Empowering the victims to break the Silence
 
 <div align="center">
-  <img src="https://i.postimg.cc/ZqZqvDZz/20240117-154846-0000.jpg" alt="Socieful Logo" width="250" height="200">
+  <img src="https://i.postimg.cc/wvwFbfYc/logo.gif" alt="Socieful Logo" width="250" height="250">
 </div>
 
 Socieful is a centralized platform aiding harassment victims through confidential AI chatbot guidance and personalized support recommendations like counsellors and NGOs. It consolidates resources to empower victims with proactive assistance, prioritizing user confidentiality with end-to-end encryption for secure interactions. The platform aims to be a comprehensive solution, facilitating users in navigating tough situations and accessing necessary support.
 
+Watch the product demo on YouTube:
+<div>
+  <a href="https://youtu.be/cvCEpHwllF8?si=qetZ-h89XFWW2M8b">
+    <img src="https://img.shields.io/badge/YouTube-%23FF0000.svg?style=for-the-badge&logo=YouTube&logoColor=white" alt="LinkedIn Badge"/>
+  </a> 	
+</div>
+
+[You can download the APK in the releases section.]()
 ## 👉🏻 Initial Survey and Problem Statement Research
 
 - The Form was circulated carefully to ensure that the intended demographic received it.
@@ -87,18 +95,22 @@ By choosing SOCIEFUL, you're not just using an app; you're joining a movement to
     </td>
     <td style="text-align: center;">
       <img src="https://i.postimg.cc/B8PfrTRw/helpline-page.gif" alt="HelpLine Page" width="200">
-      <p align="center">HelpLine Page</p>
+      <p align="center">HelpLine Page (Just Design Idea)</p>
     </td>
   </tr>
   <tr>
-    <td colspan="2">
+    <td colspan="2" style="text-align: center;">
+      <img src="https://i.postimg.cc/QNBnyDVF/track-page.gif" alt="Track Page" width="200" align="center">
+      <p align="center">Track Page (Overview. Yet To Be Developed)</p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="text-align: center;">
       <img src="https://i.postimg.cc/fRfpZvxp/firebase.gif" alt="Firebase">
       <p align="center">Firestore Database Setup</p>
     </td>
   </tr>
 </table>
-
-
 
 
 ## Getting Started 🏃‍♀️
@@ -130,7 +142,7 @@ Before you start, make sure you have installed the following on your system:
 - Add a name and email id.
 - Now experience our chatbot RAKSHAK.
 - You can terminate the existing chat by clicking on "next stage?" on the chat page and clicking on "New Chat".
-- If you feel like needing a human counsellor to deal with your situation then click on "Need a Psychiatrist?".
+- If you feel like needing a human counsellor to deal with your situation then click on "Need a Psychiatrist?" (The psychiatrist page has just the UI).
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
 - "Track Your Progress" and "Tips" pages are yet to be added.
