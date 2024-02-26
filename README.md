@@ -146,4 +146,4 @@ Before you start, make sure you have installed the following on your system:
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
 - "Track Your Progress" and "Tips" pages are yet to be added.
-- **The chatbot server is already deployed using Heroku so no need to run that file.**
+- **The chatbot server is already deployed on Heroku so no need to run that folder.**
