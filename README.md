@@ -127,7 +127,7 @@ Before you start, make sure you have installed the following on your system:
 - VS Code
 - Dart and Flutter extensions for VS Code
 - Android emulator or physical device
-- The chatbot server is already deployed using Heroku so no need to run that file.
+- Python (optional)
 
 ### Installation 🛠️
 
@@ -146,3 +146,4 @@ Before you start, make sure you have installed the following on your system:
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
 - "Track Your Progress" and "Tips" pages are yet to be added.
+- **The chatbot server is already deployed using Heroku so no need to run that file.**
