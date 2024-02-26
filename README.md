@@ -13,6 +13,7 @@ Watch the product demo on YouTube:
   </a> 	
 </div>
 
+[You can download the APK in the releases section.]()
 ## 👉🏻 Initial Survey and Problem Statement Research
 
 - The Form was circulated carefully to ensure that the intended demographic received it.
