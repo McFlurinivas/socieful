@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
 class ServerCommunicationProvider with ChangeNotifier {//This is the code sending the prompt to chatgpt api
-  final String _serverURL = 'https://socieful-a455c1e16699.herokuapp.com/';
+  final String _serverURL = 'your_server_url_here';
 
   Future<bool> checkServerHealth() async {//Checking if the server is running
     try {
