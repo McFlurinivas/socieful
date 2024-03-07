@@ -134,8 +134,35 @@ Before you start, make sure you have installed the following on your system:
 - Clone the Socieful repository.
 - Open the project folder in VS Code.
 - In VS Code, open the command palette (View > Command Palette) and type "Flutter: Run Flutter Doctor". This will check your system to make sure everything is set up correctly.
-- In VS Code, open the main.dart file and click the "Run" button. This will launch the app in the emulator or on your physical device.
 
+  #### To Setup the Virtual Environment for ChatGPT server
+  - Navigate to **chatgpt_server** folder
+  - Activate the virtual environment:
+    ```bash
+    .\Scripts\activate.bat
+    ```
+  - Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+  #### Setting up the ChatGPT API
+  - Create an OpenAI secret key by visiting the following link: https://platform.openai.com/api-keys
+  - Copy and paste the generated API key into the .env file located in the chatgpt_server folder. The content of the .env file should look like this:
+    ```bash
+    OPENAI_API_KEY=your_api_key_here
+    ```
+    Replace your_api_key_here with your actual API key.
+  - Start the server by running this command in the terminal:
+    ```bash
+    python app.py
+    ```
+  #### Configure the Flutter App
+  - Open the file **Socieful_app/lib/providers/chat_page/server_communication_provider.dart** and replace the existing URL with the URL generated when you started the server. For example:
+    ```bash
+    final String _serverUrl = 'http://127.0.0.1:5000';
+    ```
+  - In VS Code, open the **main.dart** file and click the "Run" button. This will launch the app in the emulator or on your physical device.
+    
 ## How to Use ❓
 
 - Open the "chat with us" module of the app on the home page.
@@ -146,4 +173,3 @@ Before you start, make sure you have installed the following on your system:
 - Click on your preferred doctor and book your appointment by fixing the date and time.
 - Moreover, you can access Indian helpline numbers in the "Helpline" module of the app on the home page.
 - "Track Your Progress" and "Tips" pages are yet to be added.
-- **The chatbot server is already deployed on Heroku so no need to run that folder.**
